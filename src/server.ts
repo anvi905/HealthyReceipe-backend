@@ -2,7 +2,7 @@
 import app from "./app.js";
 import { connectDB } from "./config/prisma.js";
 
-const PORT = 5000;
+const PORT = Number(process.env.PORT) || 5000;
 
 const startServer = async () => {
     await connectDB();
